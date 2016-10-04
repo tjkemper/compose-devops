@@ -1,0 +1,12 @@
+sudo yum update -y
+sudo yum install -y docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+sudo yum install epel-release
+sudo yum install -y python-pip
+sudo pip install docker-compose
+sudo yum upgrade python*
+sudo yum install -y git
+git clone https://github.com/tjkemper/compose-devops.git
+cd compose-devops/
+docker-compose up -d
